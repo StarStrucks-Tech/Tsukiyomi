@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.firebase.storage)
     implementation (libs.firebase.ui.database)
     implementation(libs.firebase.messaging)
+    implementation(libs.firebase.database.v2030)
 
 
     //Google Services
@@ -77,6 +78,5 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.androidx.navigation.fragment.ktx.v276)
     implementation(libs.androidx.navigation.ui.ktx.v276)
-    implementation(libs.firebase.database.v2030)
     implementation(libs.play.services.location)
 }
