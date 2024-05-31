@@ -13,31 +13,21 @@ import com.google.firebase.database.FirebaseDatabase
 import java.lang.reflect.ParameterizedType
 
 class BaseFragment<VB : ViewBinding> : Fragment() {
-
     private var _binding: VB? = null
-    protected val binding get() = _binding!!
+    val binding get() = _binding!!
 
-    // Firebase instances
-    protected lateinit var firestore: FirebaseFirestore
-    protected lateinit var auth: FirebaseAuth
-    protected lateinit var storage: FirebaseStorage
-    protected lateinit var realtimeDatabase: FirebaseDatabase
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        // Initialize Firebase instances
-        firestore = FirebaseFirestore.getInstance()
-        auth = FirebaseAuth.getInstance()
-        storage = FirebaseStorage.getInstance()
-        realtimeDatabase = FirebaseDatabase.getInstance()
-    }
+    val db = FirebaseFirestore.getInstance()
+    val auth = FirebaseAuth.getInstance()
+    val storage = FirebaseStorage.getInstance()
+    val database = FirebaseDatabase.getInstance()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val type = (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[0] as Class<VB>
-        val method = type.getMethod("inflate", LayoutInflater::class.java, ViewGroup::class.java, Boolean::class.java)
+        val clazz = (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[0] as Class<VB>
+        val method = clazz.getMethod("inflate", LayoutInflater::class.java, ViewGroup::class.java, Boolean::class.java)
         _binding = method.invoke(null, inflater, container, false) as VB
         return binding.root
     }
@@ -46,15 +36,4 @@ class BaseFragment<VB : ViewBinding> : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        // Optional override in derived fragments
-        setupViews()
-        setupObservers()
-    }
-
-    // Open functions to be optionally overridden in derived classes
-    open fun setupViews() {}
-    open fun setupObservers() {}
 }
