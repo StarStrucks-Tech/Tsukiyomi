@@ -6,9 +6,11 @@ coilCompose = "2.6.0"
 converterGson = "2.9.0"
 coreKtxVersion = "1.12.0"
 firebaseAuth = "23.0.0"
+firebaseCore = "21.1.1"
 firebaseDatabase = "21.0.0"
 firebaseDatabaseVersion = "20.3.0"
 firebaseFirestore = "25.0.0"
+firebaseFirestoreVersion = "24.8.0"
 firebaseMessaging = "24.0.0"
 firebaseUiDatabase = "8.0.2"
 fuel = "3.0.0-alpha1"
@@ -32,6 +34,8 @@ navigationUiKtx = "2.7.6"
 playServicesMaps = "21.2.0"
 shadowlayout = "1.0.1"
 shimmer = "0.5.0"
+googleGmsGoogleServices = "4.4.2"
+timber = "5.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.13.1" }
@@ -46,9 +50,11 @@ circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circ
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version = "2.11.0" }
 firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
+firebase-core = { module = "com.google.firebase:firebase-core", version.ref = "firebaseCore" }
 firebase-database = { module = "com.google.firebase:firebase-database", version.ref = "firebaseDatabase" }
 firebase-database-v2030 = { module = "com.google.firebase:firebase-database", version = "21.0.0" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore", version.ref = "firebaseFirestore" }
+firebase-firestore-v2480 = { module = "com.google.firebase:firebase-firestore", version.ref = "firebaseFirestoreVersion" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebaseMessaging" }
 firebase-storage = { module = "com.google.firebase:firebase-storage", version.ref = "firebaseDatabase" }
 firebase-ui-database = { module = "com.firebaseui:firebase-ui-database", version.ref = "firebaseUiDatabase" }
@@ -70,8 +76,10 @@ play-services-maps = { module = "com.google.android.gms:play-services-maps", ver
 retrofit = { module = "com.squareup.retrofit2:retrofit", version = "2.11.0" }
 shadowlayout = { module = "net.orandja.shadowlayout:shadowlayout", version.ref = "shadowlayout" }
 shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 
