@@ -30,6 +30,11 @@ android {
             )
         }
     }
+    
+    viewBinding {
+        enable = true
+    }
+    
 
     viewBinding {
         enable = true
@@ -61,11 +66,12 @@ dependencies {
     implementation(libs.fuel)
     implementation(libs.androidx.core.ktx.v1120)
 
-    // Firebase Dependencies
+    //FireBase Dependencies
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
+    implementation (libs.firebase.ui.database)
     implementation(libs.firebase.ui.database)
     implementation(libs.firebase.messaging)
     implementation(libs.firebase.database.v2030)
@@ -74,6 +80,15 @@ dependencies {
 
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation (libs.glide)
+    implementation(libs.shadowlayout)
+    implementation (libs.circleimageview)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation (libs.converter.gson)
+    implementation (libs.retrofit)
+    implementation (libs.shimmer)
+    implementation(libs.timber)
     implementation(libs.glide)
     implementation(libs.shadowlayout)
     implementation(libs.circleimageview)
@@ -83,12 +98,12 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.timber)
     implementation(libs.shimmer)
-
     implementation(libs.generativeai)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.coil.compose)
     implementation(libs.androidx.material)
     implementation(libs.androidx.navigation.fragment.ktx.v276)
     implementation(libs.androidx.navigation.ui.ktx.v276)
+    implementation (libs.play.services.maps)
     implementation(libs.play.services.location)
 }
