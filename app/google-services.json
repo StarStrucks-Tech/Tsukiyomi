@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "269298024191",
+    "project_id": "pgpod-ab05a",
+    "storage_bucket": "pgpod-ab05a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269298024191:android:d0efc2c04ba2cc4906d6ca",
+        "android_client_info": {
+          "package_name": "com.starstruckstech.pgpodandroid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDngaxssNu5cIPpvIbFrGPPqU6KfFjPibc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
