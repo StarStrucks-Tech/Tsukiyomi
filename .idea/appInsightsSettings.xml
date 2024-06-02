@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.starstruckstech.pgpodandroid" />
+                  <option name="mobileSdkAppId" value="1:670926707222:android:ababe0c5744d6bf8f57337" />
+                  <option name="projectId" value="pgpod-bd43e" />
+                  <option name="projectNumber" value="670926707222" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
