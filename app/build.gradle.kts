@@ -49,8 +49,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-
     implementation(libs.fuel)
     implementation(libs.androidx.core.ktx.v1120)
 
@@ -64,6 +62,7 @@ dependencies {
     implementation(libs.firebase.database.v2030)
     implementation(libs.firebase.core)
     implementation(libs.firebase.firestore.v2480)
+
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation (libs.glide)
@@ -75,7 +74,6 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.shimmer)
     implementation(libs.timber)
-
     implementation(libs.generativeai)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.coil.compose)
