@@ -17,6 +17,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    buildFeatures{
+        compose=true
+    }
 
     buildTypes {
         release {
@@ -30,6 +33,7 @@ android {
 
     viewBinding {
         enable = true
+
     }
 
     compileOptions {
@@ -39,6 +43,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.2"
+    }
 }
 
 dependencies {
@@ -47,6 +54,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.runtime.livedata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
