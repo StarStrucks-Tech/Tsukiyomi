@@ -36,6 +36,7 @@ shadowlayout = "1.0.1"
 shimmer = "0.5.0"
 googleGmsGoogleServices = "4.4.2"
 timber = "5.0.1"
+runtimeLivedata = "1.6.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.13.1" }
@@ -77,6 +78,7 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version = "2.11.0" }
 shadowlayout = { module = "net.orandja.shadowlayout:shadowlayout", version.ref = "shadowlayout" }
 shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+androidx-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
