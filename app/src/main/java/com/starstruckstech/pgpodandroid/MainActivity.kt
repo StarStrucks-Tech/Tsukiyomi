@@ -41,4 +41,7 @@ class MainActivity : AppCompatActivity() {
             PostScreen(posts)
 
         }
+    }
+
+}
     }}}
