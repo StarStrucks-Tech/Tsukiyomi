@@ -1,4 +1,4 @@
-package com.starstruckstech.pgpodandroid
+package com.starstruckstech.pgpodandroid.base_classes
 
 import android.os.Bundle
 import android.view.LayoutInflater
