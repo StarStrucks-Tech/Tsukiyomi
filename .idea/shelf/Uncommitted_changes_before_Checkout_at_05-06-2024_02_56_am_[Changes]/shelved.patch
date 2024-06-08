@@ -1,0 +1,33 @@
+Index: app/src/main/java/com/starstruckstech/pgpodandroid/DataRepository.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.starstruckstech.pgpodandroid\r\n\r\nclass PostRepository(private val apiService: ApiServicee) {\r\n    suspend fun getPosts(): List<Post> = apiService.getPosts()\r\n    \r\nclass PostRepository(private val networkHelper: NetworkHelper) {\r\n    suspend fun getPosts(): List<Post> {\r\n        return networkHelper.getPosts()\r\n    }\r\n}\r\n\r\ndata class Post(\r\n    val userId: Int,\r\n    val id: Int,\r\n    val title: String,\r\n    val body: String\r\n)
+===================================================================
+diff --git a/app/src/main/java/com/starstruckstech/pgpodandroid/DataRepository.kt b/app/src/main/java/com/starstruckstech/pgpodandroid/DataRepository.kt
+--- a/app/src/main/java/com/starstruckstech/pgpodandroid/DataRepository.kt	
++++ b/app/src/main/java/com/starstruckstech/pgpodandroid/DataRepository.kt	
+@@ -1,11 +1,19 @@
+ package com.starstruckstech.pgpodandroid
+ 
+-class PostRepository(private val apiService: ApiServicee) {
+-    suspend fun getPosts(): List<Post> = apiService.getPosts()
+-    
++import android.util.Log
++import com.starstruckstech.pgpodandroid.network_helper.NetworkHelper
++
+ class PostRepository(private val networkHelper: NetworkHelper) {
+-    suspend fun getPosts(): List<Post> {
+-        return networkHelper.getPosts()
++
++    fun getPosts(callback: (List<Post>?) -> Unit) {
++        networkHelper.getPosts { result ->
++            if (result != null) {
++                Log.d("PostRepository", "getPosts: Retrieved ${result.size} posts")
++            } else {
++                Log.e("PostRepository", "getPosts: Failed to retrieve posts")
++            }
++            callback(result)
++        }
+     }
+ }
+ 
