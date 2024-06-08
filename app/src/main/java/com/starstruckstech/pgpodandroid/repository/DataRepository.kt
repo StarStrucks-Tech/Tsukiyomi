@@ -3,6 +3,7 @@ package com.starstruckstech.pgpodandroid.repository
 import com.starstruckstech.pgpodandroid.network_helper.NetworkHelper
 /**
  * It acts as a mediator between the network layer and the rest of the application.
+ *@param networkhelper : NetworkHelper
  */
 
 class DataRepository(private val networkHelper: NetworkHelper) {
