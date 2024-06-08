@@ -27,11 +27,6 @@ class MainActivity : AppCompatActivity() {
 
         Timber.i("App started")
     }
-
-    override fun onStart() {
-        super.onStart()
-        Timber.i("onStart")
-    }
 }
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
 //            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
